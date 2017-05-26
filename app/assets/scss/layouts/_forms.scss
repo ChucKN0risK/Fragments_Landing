@@ -2,99 +2,27 @@
    Layout / Forms
    ======================= */
 
-.form {
+.l-form {
+  display: flex;
   width: 100%;
-  @include mq($from: tablet) {
-    max-width: $single-form-width--tablet;
-    width: $single-form-width--tablet;
+  font-family: var(--color-primary);
+
+  @include mq($from: mobile, $until: 500px) {
+    flex-direction: column;
   }
-  @include mq($from: desktop) {
-    padding: 1rem;
-    max-width: $single-form-width--desktop;
-    width: $single-form-width--desktop;
+}
+
+.l-form--subscribe-alpha {
+  .l-form__email {
+    flex-grow: 1;
   }
-  fieldset + fieldset {
+
+  .l-form__submit {
     margin-top: 1rem;
-    @include mq($from: desktop) {
-      margin-top: 2rem;
-    }
-  }
-  .validation {
-    margin-top: 1rem;
-  }
-  .sport-wrapper {
-    margin-bottom: 2rem;
-    &:last-child {
-      margin-bottom: 0;
+
+    @include mq($from: 500px) {
+      margin-top: 0;
+      margin-left: 1rem;
     }
   }
 }
-
-.form__section {
-  margin-bottom: 2rem;
-  @include mq($from: desktop) {
-    margin-bottom: 3rem;
-  }
-}
-
-.form--facebook {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .btn--facebook {
-    width: 100%;
-    max-width: 18rem;
-  }
-}
-
-.form--login,
-.form--register {
-  .alert--error {
-    margin-bottom: 1rem;
-  }
-}
-
-.form--login .password-forgotten {
-  margin-top: .5rem;
-  text-decoration: underline;
-}
-
-.form__btn-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 1rem;
-  @include mq($from: tablet) {
-    justify-content: flex-end;
-    margin-top: 2rem;
-  }
-}
-
-.form__btn-validate,
-.form__btn-cancel {
-  min-width: 6rem;
-  width: 45%;
-  padding: .5rem 1rem;
-  @include mq($from: tablet) {
-    width: auto;
-  }
-}
-
-.form__btn-validate {
-  order: 1;
-  margin-left: auto;
-  @include mq($from: tablet) {
-    margin-left: 1rem;
-  }
-}
-
-.form__btn-cancel {
-  order: 0;
-}
-
-.form__terms-and-conditions {
-  margin-top: 1rem;
-  @include rms(-1);
-}
-

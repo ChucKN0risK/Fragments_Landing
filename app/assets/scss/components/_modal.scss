@@ -21,7 +21,7 @@
   flex-direction: column;
   max-width: 40rem;
   background-color: white;
-  @include border-radius();
+  border-radius: var(--border-radius);
   overflow: hidden;
   z-index: $zIndex-modal;
   .connect-separator {

@@ -45,23 +45,23 @@
 }
 
 .u-text-red {
-  color: $red !important;
+  color: var(--color-red) !important;
 }
 
 .u-text-blue {
-  color: $blue !important;
+  color: var(--color-blue) !important;
 }
 
 .u-text-yellow {
-  color: $yellow !important;
+  color: var(--color-yellow) !important;
 }
 
 .u-text-green {
-  color: $green !important;
+  color: var(--color-green) !important;
 }
 
 .u-text-orange {
-  color: $orange !important;
+  color: var(--color-orange) !important;
 }
 
 // This class aims to show list bullets wo that list doesn't touch the edge of the screen

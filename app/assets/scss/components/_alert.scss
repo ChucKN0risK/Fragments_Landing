@@ -3,7 +3,7 @@
    ========================== */
 
 %alert {
-  @include border-radius();
+  border-radius: var(--border-radius);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   line-height: 1.2;
   margin-bottom: 1rem;
   @include mq($from: desktop) {
-    max-width: $max-content-width;
+    max-width: var(--max-content-width)
     line-height: 1.5;
   }
   .errorlist {
@@ -37,13 +37,13 @@
 .alert--success {
   @extend %alert;
   background-color: tint($success, 80%);
-  color: $success;
+  color: var(--color-success);
 }
 
 .alert--error {
   @extend %alert;
   background-color: tint($error, 80%);
-  color: $error;
+  color: var(--color-error);
 }
 
 .alert--error2 {

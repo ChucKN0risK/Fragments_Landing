@@ -12,29 +12,26 @@ textarea,
 select {
   display: flex;
   @include rms(0);
-  font-weight: 300;
-  color: $black;
-  height: $input-height;
+  color: var(--color-black);
+  height: var(--input-height);
   padding: .5em;
-  border: 1px solid $lightgrey;
-  @include border-radius();
-  background-color: #f7f7f7;
-  @include placeholder() {
-    color: rgba($black, 0.4);
-  }
+  border: 1px solid var(--color-lightgrey);
+  border-radius: var(--border-radius);
+  font-weight: 300;
   will-change: border-color;
+  outline: none;
+  @include transition;
 
   &:focus {
-    border-color: $blue;
+    border-color: var(--color-primary);
   }
 
   &.touched:required:valid {
-      border-color: $success;
-      background-color: transparent ;
+      border-color: var(--color-success);
   }
 
   &.touched:required:invalid {
-      border-color: $error;
+      border-color: var(--color-error);
 
       & + .input-error-msg {
         display: block;
@@ -54,17 +51,20 @@ textarea {
   align-items: baseline;
   width: 100%;
   margin-bottom: 1rem;
-  font-family: $font1;
+  font-family: var(--color-primary);
+
   &:last-child {
     margin-bottom: 0;
   }
+
   label {
     margin-bottom: .5rem;
+
     &.is-mandatory {
-      &:after {
+      &::after {
         content: '*';
         @include rms(-1);
-        color: $red;
+        color: var(--color-red);
       }
     }
   }
@@ -83,11 +83,11 @@ textarea {
   }
   &.disabled input {
     cursor: not-allowed;
-    background-color: $lightgrey;
+    background-color: var(--color-lightgrey);
   }
   &.has-error {
     input {
-      border-color: $error;
+      border-color: var(--color-error);
     }
   }
   &--arrow-down {
@@ -96,7 +96,7 @@ textarea {
       position: absolute;
       display: block;
       @include size(13px);
-      top: $input-height / 2;
+      top: var(--input-height) / 2;
       transform: translateY(-50%);
       right: 1rem;
       background-image: url('../icons/arrow-down.svg');
@@ -111,8 +111,7 @@ textarea {
 // the associated input
 // eg : 500 letters maximum (textarea)
 .input-upper-text {
-    font-family: $LatoRegular;
-    color: $grey;
+    color: var(--color-grey);
     @include rms(-1);
     margin-bottom: 10px;
 }
@@ -121,13 +120,13 @@ textarea {
   display: flex;
   flex-direction: column;
   font-weight: 200;
-  color: $red;
+  color: var(--color-red);
   @include rms(-1);
 }
 
 // select {
 //     width: 100%;
-//     height: $input-height;
+//     height: var(--input-height);
 //     border: 1px solid $grey;
 //     background-color: $white;
 // }
@@ -139,7 +138,7 @@ textarea {
   }
   &.has-error {
     .checkbox-label {
-      color: $error;
+      color: var(--color-error);
     }
   }
 }
@@ -172,7 +171,7 @@ textarea {
   }
   &.has-error {
     .radio-label {
-      color: $error;
+      color: var(--color-error);
     }
   }
   .radio-label {
@@ -209,8 +208,8 @@ textarea {
 
 .file-input:hover + .file-label,
 .file-input:focus + .file-label {
-  background: $blue;
-  color: white;
+  background: var(--color-blue);
+  color: var(--color-white);
 }
 
 // ---------------

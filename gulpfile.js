@@ -15,7 +15,6 @@ var uncss            = require('gulp-uncss');
 var browserSync      = require('browser-sync');
 var uglify           = require('gulp-uglify');
 var del              = require('del');
-var critical         = require('critical').stream;
 var imagemin         = require('gulp-imagemin');
 var rename           = require('gulp-rename');
 var svgstore         = require('gulp-svgstore');
@@ -44,7 +43,6 @@ var path = {
     svgSprite: 'app/assets/icons/dest',
     fonts: 'app/assets/fonts/*.{ttf,woff,eof,svg,otf}',
     html: 'app/*.html',
-    php: 'app/*.php',
     dist: 'dist/',
     dist_js: 'dist/assets/js/',
     dist_js_vendor: 'dist/assets/js/vendor/',
@@ -136,7 +134,7 @@ gulp.task('sass-prod', function() {
 // in the .html files of the app/.
 gulp.task('uncss', function() {
     return gulp
-        .src(path.dist_css + "style.css")
+        .src(path.dist_css + 'style.css')
         .pipe(uncss({
             html: [path.html]
         }))
@@ -157,57 +155,8 @@ gulp.task('copy-img', function() {
         .pipe(gulp.dest(path.img_resized));
 });
 
-gulp.task('resize-ipad2', function() {
-    return gulp.src(path.img_to_resize)
-        .pipe(changed(path.img_resized))
-        .pipe(parallel(
-            imageResize({ width: 2048 }),
-            os.cpus().length
-        ))
-        .pipe(rename(function(path) { path.basename += "_med2"; }))
-        .pipe(gulp.dest(path.img_resized));
-});
-
-gulp.task('resize-ipad', function() {
-    return gulp.src(path.img_to_resize)
-        .pipe(changed(path.img_resized))
-        .pipe(parallel(
-            imageResize({ width: 1024 }),
-            os.cpus().length
-        ))
-        .pipe(rename(function(path) { path.basename += "_med"; }))
-        .pipe(gulp.dest(path.img_resized));
-});
-
-gulp.task('resize-mobile2', function() {
-    return gulp.src(path.img_to_resize)
-        .pipe(changed(path.img_resized))
-        .pipe(parallel(
-            imageResize({ width: 1536 }),
-            os.cpus().length
-        ))
-        .pipe(rename(function(path) { path.basename += "_small2"; }))
-        .pipe(gulp.dest(path.img_resized));
-});
-
-gulp.task('resize-mobile', function() {
-    return gulp.src(path.img_to_resize)
-        .pipe(changed(path.img_resized))
-        .pipe(parallel(
-            imageResize({ width: 768 }),
-            os.cpus().length
-        ))
-        .pipe(rename(function(path) { path.basename += "_small"; }))
-        .pipe(gulp.dest(path.img_resized));
-});
-
 // Compress Images
-gulp.task('clean-img-resized', function() {
-    return del.sync(path.img_resized);
-});
-
-// Compress Images
-gulp.task('img', ['copy-img', 'clean-img-resized', 'resize-ipad2', 'resize-ipad', 'resize-mobile2', 'resize-mobile'], function() {
+gulp.task('img', ['copy-img'], function() {
     return gulp
         .src(path.img)
         .pipe(changed(path.dist_img))
@@ -242,46 +191,6 @@ gulp.task('svg2png', function () {
         .pipe( gulp.dest( path.svgSprite ) )
 });
 
-// Generate & Inline Critical-path CSS
-gulp.task('critical', function() {
-    return gulp
-        .src(path.html)
-        .pipe(critical({
-            base: './',
-            inline: true,
-            minify: true,
-            dimensions: [{
-                height: 1300,
-                width: 900
-            }]
-        }))
-        .pipe(gulp.dest(path.dist));
-});
-
-// Run a Google Page Speed Insight Test for mobile
-gulp.task('PSIMobile', function() {
-    return psi(site, {
-        // key: key
-        nokey: 'true',
-        strategy: 'mobile',
-    }, function(err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
-    });
-});
-
-// Run a Google Page Speed Insight Test for desktop
-gulp.task('PSIDesktop', function() {
-    return psi(site, {
-        nokey: 'true',
-        // key: key,
-        strategy: 'desktop',
-    }, function(err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
-    });
-});
-
 // Deleting all dist content
 gulp.task('clean', function() {
     return del.sync('dist');
@@ -304,10 +213,6 @@ gulp.task('build', ['clean', 'sass-prod', 'js-prod', 'img', 'svgstore'], functio
             this.querySelector('body').classList.add('build-prod');
             return this;
         }))
-        .pipe(gulp.dest(path.dist));
-
-    // Copy PHP files to dist
-    gulp.src(path.php)
         .pipe(gulp.dest(path.dist));
 
     // Copy fonts files to dist
