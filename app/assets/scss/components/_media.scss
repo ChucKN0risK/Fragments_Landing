@@ -15,14 +15,6 @@
     }
   }
 
-  @include mq($from: mobileLandscape, $until: tablet) {
-    width: calc((100% - 4rem) / 2);
-
-    &:nth-child(n+3) {
-      margin-top: 3rem;
-    }
-  }
-
   @include mq($from: tablet) {
     width: calc((100% - 6rem) / 3);
     
@@ -32,9 +24,30 @@
   }
 }
 
+.media--full {
+  @include mq($from: tablet) {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .media__figure {
+      max-width: 50%;
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.media--content-v-centered {
+  align-items: center;
+  text-align: center;
+}
+
+.media--content-left {
+  justify-content: flex-end;
+}
+
 .media__figure {
-  display: flex;
-  max-height: 7rem;
   margin-bottom: var(--padding-media);
 
   svg {
@@ -47,110 +60,11 @@
 }
 
 .media__title {
+  @include rms(2);
   margin-bottom: calc(var(--padding-media) / 2);
   color: var(--color-black);
 }
 
 .media__text {
-  font-family: var(--RobotoLight);
-}
-
-.media--form-alpha {
-  width: 100%;
-  padding: 0;
-
-  @include mq($from: 600px) {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .media__figure {
-    max-height: initial;
-
-    @include mq($from: 600px) {
-      margin-bottom: 0;
-      margin-right: 1rem;
-    }
-
-    @include mq($from: 640px) {
-      margin-right: 2rem;
-    }
-  }
-
-  .media__body {
-    width: 100%;
-    max-width: 30rem;
-  }
-
-
-  .media__subtitle {
-    margin-bottom: 1rem;
-  }
-}
-
-// Media object with its body overlapping
-// its figure
-.media--overlap {
-  width: 100%;
-
-  & + & {
-    margin-top: 0;
-  }
-
-  .media__figure {
-    display: flex;
-    margin-bottom: initial;
-
-    img {
-      object-fit: cover;
-    }
-
-    @include mq($from: mobile, $until: 620px) {
-      max-height: 50vw;
-    }
-  }
-
-  .media__body {
-    align-self: center;
-    padding: 1rem;
-    background-color: var(--color-white);
-    
-    @include mq($from: mobile, $until: 620px) {
-      max-width: 90%;
-      transform: translateY(-3rem);
-    }
-  }
-
-  @include mq($from: 620px) {
-    flex-direction: row;
-    height: 20rem;
-
-    & + & {
-      margin-top: 3rem;
-    }
-
-    &:nth-child(even) {
-      .media__figure {
-        order: 1;
-      }
-      .media__body {
-        transform: translateX(3rem);
-      }
-    }
-
-    .media__figure {
-      width: 50%;
-      height: 100%;
-      max-height: initial;
-    }
-
-    .media__body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 3rem 0 3rem 3rem;
-      min-height: 80%;
-      transform: translateX(-3rem);
-    }
-  }
+  margin-bottom: var(--padding-media);
 }

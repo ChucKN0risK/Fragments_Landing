@@ -60,8 +60,8 @@
     &--typography,
     &--buttons {
         @include flex-vertical-center();
-        button[class*="c-btn--"],
-        a[class*="c-btn--"] {
+        button[class*="m-btn--"],
+        a[class*="m-btn--"] {
             margin-bottom: 1rem;
         }
     }
@@ -152,7 +152,7 @@
 
     .service-presentation {
         .media--presentation-item:nth-child(odd) {
-            background-color: var(--color-lightgrey);
+            background-color: var(--color-lightgrey-20);
             .media__title {
                 color: var(--color-blue);
             }

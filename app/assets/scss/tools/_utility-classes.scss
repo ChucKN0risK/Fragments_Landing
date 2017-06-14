@@ -11,6 +11,10 @@
   overflow: hidden !important;
 }
 
+.u-max-content-width {
+  max-width: var(--max-content-width) !important;
+}
+
 .u-hide {
   display: none !important;
   visibility: hidden !important;
@@ -64,7 +68,12 @@
   color: var(--color-orange) !important;
 }
 
-// This class aims to show list bullets wo that list doesn't touch the edge of the screen
+.u-text-purple {
+  color: var(--color-purple-10) !important;
+}
+
+// This class aims to show list bullets so
+// that list doesn't touch the edge of the screen
 .u-list-default {
   margin-left: 1rem !important;
 }

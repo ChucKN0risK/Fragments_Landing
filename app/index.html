@@ -3,180 +3,241 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>A modern design system manager | Fragments</title>
-    <meta name="description" content="Fragments is a design system managers for UI designers and frontend developers.">
+    <title>Fragments | Votre gestionnaire de design system</title>
+    <meta name="description" content="Fragments : votre gestionnaire de design system.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="l-base-section l-main-header">
-    <div class="l-base-section__content-wrapper l-main-header__content">
-      <div class="c-logo">
-        <svg class="c-logo__icon" role="img" title="Fragments">
-          <use xlink:href="assets/icons/dest/icons.svg#fragments-logo" />
-        </svg>
-      </div>
-
+    <div class="l-content-wrapper l-main-header__content">
       <nav class="c-nav l-main-header__nav">
+        <div class="c-logo">
+          <svg class="c-logo__icon" role="img" title="Fragments">
+            <use xlink:href="assets/icons/dest/icons.svg#fragments-logo" />
+          </svg>
+        </div>
+        <ul class="l-main-header__nav__anchors-list">
+          <li class="l-main-header__nav__anchor">
+            <a class="l-main-header__nav__anchor__link" href="#fonctionnalities">Fonctionnalités</a>
+          </li>
+          <li class="l-main-header__nav__anchor">
+            <a class="l-main-header__nav__anchor__link" href="#pricing">Tarifs</a>
+          </li>
+          <li class="l-main-header__nav__anchor">
+            <a class="l-main-header__nav__anchor__link" href="#contact">Nous contacter</a>
+          </li>
+        </ul>
         <ul class="l-main-header__nav__item-list">
           <li class="l-main-header__nav__item">
-            <a href="mailto:contact@fragment.design" class="c-link">Contact us</a>
-          </li>
-          <li class="l-main-header__nav__item">
-            <a href="#form-subscribe-alpha" class="c-btn">Join Private Alpha</a>
+            <a href="#form-subscribe-alpha" class="m-btn m-btn--primary">S'inscrire à l'Alpha privée</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="l-base-section">
-    <div class="l-base-section__content-wrapper">
-      <section class="l-hero-section">
-        <h1 class="l-hero-section__title">A design system manager for modern teams</h1>
-        <p class="l-hero-section__subtitle">Produce consistent interfaces across your teams and products</p>
-        <a href="#form-subscribe-alpha" class="c-btn l-hero-section__cta">Join Private Alpha</a>
-        <!-- <p>Design systems are an investment that improves the design and the development workflow. However it takes time and resources to build and maintain them. Fragments comes to the rescue!</p> -->
+  <main>
+      <section class="l-hero-section l-base-section">
+        <div class="l-content-wrapper">
+          <h1 class="l-hero-section__title">Créez et maintenez facilement votre <span class="u-text-purple">design system</span></h1>
+          <p class="l-hero-section__subtitle">Développez des interfaces cohérentes à travers vos équipes et vos produits.</p>
+          <a href="#form-subscribe-alpha" class="m-btn m-btn--primary l-hero-section__cta">S'inscrire à l'Alpha privée</a>
+        </div>
       </section>
 
-      <section class="section">
-        <blockquote class="c-testimonial">
-          <p class="c-testimonial__text">"A design system contains whatever your organization needs to communicate design decisions."</p>
-          <cite>
-            <p class="c-testimonial__author">Jina Anne</p>
-            <span class="c-testimonial__role">Lead Designer at Salesforce</span>
-          </cite>
-        </blockquote>
+      <section class="section section--bottom-border">
+        <div class="l-content-wrapper">          
+          <ul class="l-base-section media-wrapper">
+            <li class="media media--content-v-centered">
+              <div class="media__figure">
+                <svg role="img">
+                  <use xlink:href="assets/icons/dest/icons.svg#btn-illustration" />
+                </svg>
+              </div>
+              <div class="media__body">
+                <h4 class="media__title">Vos composants organisés et partagés</h4>
+                <p class="media__text">Travaillez avec plusieurs designers ne vous aura jamais semblé aussi simple.</p>
+              </div>
+            </li>
+            <li class="media media--content-v-centered">
+              <div class="media__figure">
+                <svg role="img">
+                  <use xlink:href="assets/icons/dest/icons.svg#Aa-illustration" />
+                </svg>
+              </div>
+              <div class="media__body">
+                <h4 class="media__title">Des specs simplifiées et automatisées.</h4>
+                <p class="media__text">Vous n’aurez plus aucune raison de constater des incohérences dans vos produits.</p>
+              </div>
+            </li>
+            <li class="media media--content-v-centered">
+              <div class="media__figure">
+                <svg role="img">
+                  <use xlink:href="assets/icons/dest/icons.svg#artboard-illustration" />
+                </svg>
+              </div>
+              <div class="media__body">
+                <h4 class="media__title">Partagez vos interfaces aux développeurs</h4>
+                <p class="media__text">Parce qu’il est important de choyer nos développeurs, nous avons conçu des vues spécialement pour eux.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="section">
-        <h3 class="section__title">What we want to change</h3>
-        <ul class="media-wrapper">
-          <li class="media media--overlap">
-            <div class="media__figure">
-              <img src="assets/img/lego-office.png">
+      <section class="l-base-section section section--form-alpha u-text-centered" id="form-subscribe-alpha">
+        <div class="l-content-wrapper">
+          <h3 class="section__title">Inscrivez-vous à notre Alpha privée</h3>
+          <p class="section__subtitle">Nous enverrons des invitations chaque semaine, alors inscrivez-vous à la liste d’attente sans plus attendre.</p>
+          <form class="l-form l-form--subscribe-alpha">
+            <div class="l-form--subscribe-alpha__fullname-wrapper">
+              <div class="input-wrapper">
+                <label for="name" class="input-wrapper__label">Nom</label>
+                <input type="text" id="name" class="input-wrapper__input" required>
+              </div>
+              <div class="input-wrapper">
+                <label for="name" class="input-wrapper__label">Prénom</label>
+                <input type="text" id="name" class="input-wrapper__input" required>
+              </div>
             </div>
-            <div class="media__body">
-              <h4 class="media__title">Designers and developers are separated</h4>
-              <p class="media__text">At Fragments, we believe great products are built when design and technology are brought together. The digital world is moving towards a new agile process killing the old waterfall one.</p>
+            <div class="input-wrapper">
+              <label for="name" class="input-wrapper__label">Adresse e-mail</label>
+              <input type="email" id="name" class="input-wrapper__input" required>
             </div>
-          </li>
-          <li class="media media--overlap">
-            <div class="media__figure">
-              <img src="assets/img/pnc-buttons.png">
+            <div class="input-wrapper">
+              <label for="name" class="input-wrapper__label">Nom de votre entreprise</label>
+              <input type="text" id="name" class="input-wrapper__input" required>
             </div>
-            <div class="media__body">
-              <h4 class="media__title">Inconsistent brand UIs</h4>
-              <p class="media__text">Good products degrade as they grow and get harder to maintain. More people join, some earlier folks leave, and clarity of design vision deteriorates.</p>
-            </div>
-          </li>
-          <li class="media media--overlap">
+            <button type="submit" class="m-btn m-btn--primary l-form__submit">M'inscrire à l'Alpha privée</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="l-base-section section section--bg-lightgrey" id="fonctionnalities">
+        <div class="l-content-wrapper">
+          <div class="media media--full">
             <div class="media__figure">
               <img src="assets/img/makers-users.png">
             </div>
             <div class="media__body">
-              <h4 class="media__title">There is no shared place to collaborate</h4>
-              <p class="media__text">We all seek for a perfect synchronisation between our visual design tools and our final product. Still, each people involved in the process doesn’t share the same language or resources.</p>
+              <h4 class="media__title">Collaborez avec vos designers</h4>
+              <p class="media__text">Travaillez avec plusieurs designers ne vous aura jamais semblé aussi simple. Créez vos composants et partagez-les à travers une bibliothèque organisable à souhait.</p>
+              <ul class="list-pros">
+                <li>Style de texte</li>
+                <li>Palette de couleurs</li>
+                <li>Symboles Sketch</li>
+                <li>Assets</li>
+              </ul>
             </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h3 class="section__title">What we help you do</h3>
-        <ul class="media-wrapper">
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#clients" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Bringing designers and developers closer</h4>
-              <p class="media__text">Sharing and maintaining UI Libraries across Sketch files is hard. The Fragment Sketch Plugin will help you create a design library and share it with your team members.</p>
-            </div>
-          </li>
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#copywriting" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Finally a place to write specs</h4>
-              <p class="media__text">Fragment helps you write specs easily with a an intuitive text editor.</p>
-            </div>
-          </li>
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#workflow" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Generate assets for iOS, Android and the web</h4>
-              <p class="media__text">Your brand assets such as colors, fonts, spacings, breakpoints are synced and shared across all of your platforms and products.</p>
-            </div>
-          </li>
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#web-coding" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Sync your assets with your code repository</h4>
-              <p class="media__text">Just link your code repository to the Fragment Sketch Plugin so designers can update your brand assets.</p>
-            </div>
-          </li>
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#alert-message" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Get notified via the Fragment Slack app</h4>
-              <p class="media__text">Everytime your UI Library is updated your team members are notified on Slack.</p>
-            </div>
-          </li>
-          <li class="media">
-            <div class="media__figure">
-              <svg role="img">
-                <use xlink:href="assets/icons/dest/icons.svg#stopwatch" />
-              </svg>
-            </div>
-            <div class="media__body">
-              <h4 class="media__title">Speed up your team productivity</h4>
-              <p class="media__text">With a design system no need to reinvent the wheel when starting a new project. It allows your team to focus on what matters most: designing.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section section--private-alpha" id="form-subscribe-alpha">
-        <div class="media media--form-alpha">
-          <div class="media__figure">
-            <svg role="img" title="Fragments">
-              <use xlink:href="assets/icons/dest/icons.svg#launch" />
-            </svg>
-          </div>
-          <div class="media__body">
-            <h3 class="media__title">Sign up for the Private Alpha</h3>
-            <p class="media__subtitle">Get notified when Fragments launches</p>
-            <form class="l-form l-form--subscribe-alpha">
-              <input class="l-form__email" type="email" name="mail" placeholder="Email address" required>
-              <button type="submit" class="c-btn l-form__submit">Join Private Alpha</button>
-            </form>
           </div>
         </div>
       </section>
-    </div>
+
+      <section class="l-base-section section">
+        <div class="l-content-wrapper">
+          <div class="media media--full">
+            <div class="media__figure">
+              <img src="assets/img/makers-users.png">
+            </div>
+            <div class="media__body">
+              <h4 class="media__title">Des spécifications travaillées</h4>
+              <p class="media__text">Travaillez avec plusieurs designers ne vous aura jamais semblé aussi simple. Créez vos composants et partagez-les à travers une bibliothèque organisable à souhait.</p>
+              <ul class="list-pros">
+                <li>Style de texte</li>
+                <li>Palette de couleurs</li>
+                <li>Symboles Sketch</li>
+                <li>Assets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-base-section section section--bg-lightgrey">
+        <div class="l-content-wrapper">
+          <div class="media media--full">
+            <div class="media__figure">
+              <img src="assets/img/makers-users.png">
+            </div>
+            <div class="media__body">
+              <h4 class="media__title">Partagez vos interfaces aux développeurs</h4>
+              <p class="media__text">Travaillez avec plusieurs designers ne vous aura jamais semblé aussi simple. Créez vos composants et partagez-les à travers une bibliothèque organisable à souhait.</p>
+              <ul class="list-pros">
+                <li>Style de texte</li>
+                <li>Palette de couleurs</li>
+                <li>Symboles Sketch</li>
+                <li>Assets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-base-section section u-text-centered" id="pricing">
+        <div class="l-content-wrapper">
+          <h3 class="section__title">Une offre adaptée à vos besoins</h3>
+          <div class="price-table-list">
+            <div class="price-table">
+              <header class="price-table__row price-table__header">
+                <div class="price-table__row__text price-table__row__plan">Free</div>
+                <div class="price-table__row__variation">0€ <span class="price-table__row__price-details">/ PERS. / MOIS</span></div>
+              </header>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Nombre de projets</div>
+                <div class="price-table__row__variation">1</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Nombre d'utilisateurs</div>
+                <div class="price-table__row__variation">2</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Automatisation des specs</div>
+                <div class="price-table__row__variation">Oui</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Rôles utilisateurs</div>
+                <div class="price-table__row__variation">Non</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Notifications (Email, Slack)</div>
+                <div class="price-table__row__variation">Non</div>
+              </div>
+            </div>
+            <div class="price-table">
+              <header class="price-table__row price-table__header price-table__header--highlighted">
+                <div class="price-table__row__text price-table__row__plan">Business</div>
+                <div class="price-table__row__variation">23€ <span class="price-table__row__price-details">/ PERS. / MOIS</span></div>
+              </header>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Nombre de projets</div>
+                <div class="price-table__row__variation">Illimité</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Nombre d'utilisateurs</div>
+                <div class="price-table__row__variation">Personnalisé</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Automatisation des specs</div>
+                <div class="price-table__row__variation">Oui</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Rôles utilisateurs</div>
+                <div class="price-table__row__variation">Oui</div>
+              </div>
+              <div class="price-table__row">
+                <div class="price-table__row__text">Notifications (Email, Slack)</div>
+                <div class="price-table__row__variation">Oui</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
   </main>
 
   <footer class="l-base-section l-main-footer">
-    <div class="l-base-section__content-wrapper l-main-footer__content">
-      <p class="l-main-footer__made">Fragments is made with tons of croissants from France</p>
+    <div class="l-content-wrapper l-main-footer__content">
+      <p class="l-main-footer__made">From Paris with ❤️</p>
       <p class="l-main-footer__copyrights">Copyright © 2017 Fragments.</p>
     </div>
   </footer>

@@ -2,9 +2,9 @@
    Components / Buttons
    ======================= */
 
-.c-btn {
+.m-btn {
   padding: .5rem 1rem;
-  border: 1px solid var(--color-purple);
+  border: 1px solid var(--color-purple-10);
   border-radius: var(--border-radius);
   color: var(--color-primary);
   text-decoration: none;
@@ -15,4 +15,9 @@
     color: var(--color-white);
     background-color: var(--color-primary);
   }
+}
+
+.m-btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }

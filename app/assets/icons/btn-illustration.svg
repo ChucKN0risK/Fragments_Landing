@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="38px" viewBox="0 0 77 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Copy-4" transform="translate(-434.000000, -700.000000)">
+            <g id="Group-5" transform="translate(240.000000, 652.000000)">
+                <g id="btn-illustration" transform="translate(194.000000, 48.000000)">
+                    <rect id="Rectangle" fill-opacity="0.7" fill="#BFA9F2" x="4.2" y="4.22222222" width="72.8" height="33.7777778" rx="1.69230766"></rect>
+                    <rect id="Rectangle-Copy" stroke="#6032C3" stroke-width="1.39999998" x="0.699999988" y="0.699999988" width="73.0615385" height="32.639621" rx="1.69230766"></rect>
+                    <text id="Button" font-family="Roboto-Bold, Roboto" font-size="11.1999998" font-weight="bold" fill="#6032C3">
+                        <tspan x="20.8593152" y="22.5071726">Button</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

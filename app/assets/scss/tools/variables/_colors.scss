@@ -5,17 +5,19 @@
 // Graphic chart
 :root {
   --color-white: #fff;
-  --color-black: #2e2e2e;
+  --color-black: #000;
   --color-red: #fa4a4a;
   --color-blue: #202f55;
-  --color-grey: #909090;
-  --color-lightgrey: #e5e7ea;
+  --color-grey: rgba(0,0,0, .57);
+  --color-lightgrey-10: #f9f9f9;
+  --color-lightgrey-20: #e5e7ea;
   --color-orange: #d35400;
   --color-green: #27ae60;
-  --color-purple: #7a57d1;
+  --color-purple-10: #7a57d1;
+  --color-purple-40: #4300B3;
   --color-yellow: #f1c40f;
 
-  --color-primary: var(--color-purple);
+  --color-primary: var(--color-purple-40);
   --color-error: var(--color-red);
   --color-success: var(--color-green);
 }

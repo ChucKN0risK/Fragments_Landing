@@ -87,9 +87,10 @@ h3,
 h4,
 h5,
 h6 {
-  @include transition();
-  line-height: 1.2;
   margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  @include transition();
 }
 
 // The ms() function usually ranges from -6 to 6/7

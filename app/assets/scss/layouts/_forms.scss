@@ -4,12 +4,12 @@
 
 .l-form {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  font-family: var(--color-primary);
-
-  @include mq($from: mobile, $until: 500px) {
-    flex-direction: column;
-  }
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-primary);
 }
 
 .l-form--subscribe-alpha {
@@ -19,10 +19,28 @@
 
   .l-form__submit {
     margin-top: 1rem;
+  }
+}
 
-    @include mq($from: 500px) {
-      margin-top: 0;
+.l-form--subscribe-alpha__fullname-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .input-wrapper {
+    margin-bottom: 0;
+  }
+
+  .input-wrapper + .input-wrapper {
+    @include mq($from: mobile, $until: 549px) {
+      margin-top: 1rem;
+    }
+    @include mq($from: 550px) {
       margin-left: 1rem;
     }
+  }
+
+  @include mq($from: 550px) {
+    flex-direction: row;
   }
 }

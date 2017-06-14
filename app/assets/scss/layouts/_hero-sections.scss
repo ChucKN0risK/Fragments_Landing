@@ -4,25 +4,21 @@
 
 .l-hero-section {
   margin-bottom: 2rem;
+  background-image: url('../img/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 0;
+  text-align: center;
+}
 
-  @include mq($from: 600px) {
-    padding: 4rem 50% 4rem 0;
-    background-image: url('../icons/patterns-system.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100% 0;
-  }
+.l-hero-section__title {
 }
 
 .l-hero-section__subtitle {
-  @include rms(2);
+  @include rms(1);
 }
 
 .l-hero-section__cta {
   display: inline-block;
-  margin-top: 1rem;
-
-  @include mq($from: $header-nav-breakpoint) {
-    display: none;
-  }
+  margin-top: 2rem;
 }

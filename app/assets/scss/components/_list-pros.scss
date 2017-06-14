@@ -1,0 +1,24 @@
+//=======================
+// Components / List Pros
+// =======================
+
+.list-pros {
+  list-style: none;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      @include size(1rem);
+      margin-right: calc(var(--padding-media) / 2);
+      background-image: url('../icons/check.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

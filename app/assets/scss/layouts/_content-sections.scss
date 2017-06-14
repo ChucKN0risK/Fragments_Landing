@@ -14,11 +14,12 @@
   }
 }
 
-// The content inside our base sections
+// The content inside our base layout elements
+// (such as header, footer, section...)
 // may not take the full width of its parent.
 // Hence we give it a max-width, make it take
 // its parent's height and center it
-.l-base-section__content-wrapper {
+.l-content-wrapper {
   width: 100%;
   max-width: var(--max-content-width);
   height: 100%;
@@ -26,15 +27,14 @@
   margin-right: auto;
 }
 
-
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &:not(.l-hero-section) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     @include mq($from: tablet) {
       padding-top: 4rem;
@@ -43,6 +43,29 @@
   }
 }
 
+.section--bottom-border {
+  border-bottom: var(--border-width) solid var(--color-grey);
+}
+
+.section--bg-lightgrey {
+  background-color: var(--color-lightgrey-10);
+}
+
+.section--form-alpha {
+  .l-content-wrapper {
+    max-width: 35rem;
+  }
+}
+
 .section__title {
+  font-weight: normal;
+
+  @include mq($from: tablet) {
+    margin-bottom: 2rem;
+  }
+}
+
+.section__subtitle {
+  color: var(--color-grey);
   margin-bottom: 3rem;
 }

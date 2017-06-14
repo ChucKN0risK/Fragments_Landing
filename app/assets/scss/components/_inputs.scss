@@ -14,8 +14,8 @@ select {
   @include rms(0);
   color: var(--color-black);
   height: var(--input-height);
-  padding: .5em;
-  border: 1px solid var(--color-lightgrey);
+  padding: .5rem;
+  border: var(--border-width) solid var(--color-lightgrey-20);
   border-radius: var(--border-radius);
   font-weight: 300;
   will-change: border-color;
@@ -58,6 +58,7 @@ textarea {
   }
 
   label {
+    color: var(--color-grey);
     margin-bottom: .5rem;
 
     &.is-mandatory {
@@ -83,7 +84,7 @@ textarea {
   }
   &.disabled input {
     cursor: not-allowed;
-    background-color: var(--color-lightgrey);
+    background-color: var(--color-lightgrey-20);
   }
   &.has-error {
     input {
