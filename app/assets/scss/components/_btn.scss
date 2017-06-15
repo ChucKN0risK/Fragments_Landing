@@ -3,11 +3,17 @@
    ======================= */
 
 .m-btn {
-  padding: .5rem 1rem;
-  border: 1px solid var(--color-purple-10);
+  height: 2.5rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  border: none;
   border-radius: var(--border-radius);
   color: var(--color-primary);
   text-decoration: none;
+  font-size: 14px;
+  line-height: 2.5rem;
+  font-family: var(--RobotoMedium);
+  font-weight: 500;
   @include transition;
   will-change: background-color;
 
@@ -20,4 +26,5 @@
 .m-btn--primary {
   background-color: var(--color-primary);
   color: var(--color-white);
+  box-shadow: 0 1px 8px 0 rgba(67,0,179,0.08), 0 5px 25px 0 rgba(67,0,179,0.1);
 }

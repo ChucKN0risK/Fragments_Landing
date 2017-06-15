@@ -33,12 +33,13 @@
 
 .l-main-header__nav__anchor {
   & + & {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
   }
 }
 
 .l-main-header__nav__anchor__link {
   text-decoration: none;
+  color: var(--color-grey-40);
 }
 
 .l-main-header__nav__item-list {

@@ -25,13 +25,31 @@
 }
 
 .media--full {
+  .media__body {
+    max-width: 30.625rem; // 490px
+  }
+  .media__title {
+    font-size: 36px;
+    line-height: 1.1388888889;
+    margin-bottom: 2rem;
+  }
+  .media__text {
+    font-size: 19px;
+    line-height: 1.5789473684;
+  }
+  
+  .list-pros {
+    margin-top: 2.5rem;
+  }
+
   @include mq($from: tablet) {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 
     .media__figure {
-      max-width: 50%;
+      max-width: 53.125rem; //850px
       margin-bottom: 0;
       margin-right: 2rem;
     }
@@ -58,10 +76,17 @@
 }
 
 .media__figure {
-  margin-bottom: var(--padding-media);
+  margin-bottom: calc(var(--padding-media) * 2.5);
 
   svg {
     width: 7rem;
+    max-height: 2.5rem;
+  }
+}
+
+.media__figure--dev {
+  svg {
+    max-height: 60px;
   }
 }
 
@@ -70,7 +95,9 @@
 }
 
 .media__title {
-  @include rms(1);
+  font-family: var(--RobotoLight);
+  font-size: 20px;
+  line-height: 1.5;
   margin-bottom: calc(var(--padding-media) / 2);
   color: var(--color-black);
 }

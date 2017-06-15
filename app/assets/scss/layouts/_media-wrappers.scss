@@ -12,6 +12,10 @@
   @include mq($from: tablet) {
     flex-flow: row wrap;
     justify-content: space-between;
+    // since all SVG inside do not have
+    // the same height we want to align
+    // them according to their body text
+    align-items: flex-end;
   }
 }
 

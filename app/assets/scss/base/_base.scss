@@ -120,7 +120,8 @@ ul,
 blockquote,
 figcaption {
   font-family: var(--RobotoRegular);
-  color: var(--color-grey);
+  color: var(--color-grey-50);
+  line-height: 1.5;
 }
 
 img {

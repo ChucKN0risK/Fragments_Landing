@@ -23,7 +23,7 @@
   min-width: 19rem;
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.05), 0 1px 2px 0 rgba(0,0,0,0.1);
-  color: var(--color-grey);
+  color: var(--color-grey-50);
   overflow: hidden;
 
   @include mq($from: tablet) {
@@ -40,12 +40,42 @@
   }
 }
 
-.price-table__header {
-  color: var(--color-black);
-  @include rms(1);
+.price-table__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--base-padding);
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: calc(100% - (var(--base-padding) * 2));
+    background-color: var(--color-lightgrey-20);
+  }
+
+  @include mq($from: desktop) {
+    --base-padding: 1.5rem;
+  }
 }
 
-.price-table__header--highlighted {
+.price-table__row.price-table__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: var(--color-black);
+  font-size: 25px;
+  line-height: 1.32;
+
+  &::after {
+    width: 100%;
+    background-color: var(--color-grey-20);
+  }
+}
+
+.price-table__row.price-table__header--highlighted {
   background-color: var(--color-purple-10);
   font-family: var(--RobotoLight);
 
@@ -59,25 +89,11 @@
 .price-table__row__price-details {
   text-transform: uppercase;
   @include rms(-2);
-  color: var(--color-grey);
+  color: var(--color-grey-30);
 }
 
-.price-table__row {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: var(--base-padding);
-
-  &:not(.price-table__header--highlighted)::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 1px;
-    width: calc(100% - (var(--base-padding) * 2));
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--color-lightgrey-10); //rgba(0,0,0,0.05)
-  }
+.price-table__header--highlighted {
+  
 }
 
 .price-table__row__variation {
