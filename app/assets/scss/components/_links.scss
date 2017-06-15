@@ -3,12 +3,23 @@
    ======================= */
 
 .a-link {
-  color: var(--color-purple);
   text-decoration: none;
   @include transition;
+}
+
+.a-link--primary {
+  color: var(--color-primary);
   will-change: color;
 
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-purple-300);
+  }
+}
+
+.a-link--secondary {
+  color: var(--color-grey-40);
+
+  &:hover {
+    color: var(--color-purple-600);
   }
 }

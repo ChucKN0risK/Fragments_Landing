@@ -3,13 +3,13 @@
    ========================= */
 
 .l-hero-section {
-  background-image: url('../img/hero-bg.png');
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center;
   text-align: center;
 
   @include mq($from: tablet) {
+    background-image: url('../img/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
     padding-top: 10rem;
   }
   @include mq($from: desktop) {

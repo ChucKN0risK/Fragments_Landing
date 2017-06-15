@@ -17,11 +17,14 @@
   --color-lightgrey-20: #e5e7ea;
   --color-orange: #d35400;
   --color-green: #27ae60;
-  --color-purple-10: #7a57d1;
-  --color-purple-40: #4300B3;
+  --color-purple-300: #bfA9f2;
+  --color-purple-400: #9474dd;
+  --color-purple-500: #7A57d1;
+  --color-purple-600: #6032c3;
+  --color-purple-700: #4300b3;
   --color-yellow: #f1c40f;
 
-  --color-primary: var(--color-purple-40);
+  --color-primary: var(--color-purple-600);
   --color-error: var(--color-red);
   --color-success: var(--color-green);
 }
