@@ -5,21 +5,37 @@
 .price-table-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   font-family: var(--font-primary);
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .price-table {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 25rem;
+  min-width: 19rem;
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.05), 0 1px 2px 0 rgba(0,0,0,0.1);
   color: var(--color-grey);
   overflow: hidden;
 
+  @include mq($from: tablet) {
+    flex-grow: 1;
+  }
+
   & + & {
     @include mq($from: mobile, $until: tablet) {
       margin-top: 2rem;
+    }
+    @include mq($from: tablet) {
+      margin-left: 2rem;
     }
   }
 }

@@ -2,8 +2,8 @@
    Components / Links
    ======================= */
 
-.c-link {
-  color: var(--color-black);
+.a-link {
+  color: var(--color-purple);
   text-decoration: none;
   @include transition;
   will-change: color;

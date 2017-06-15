@@ -9,7 +9,7 @@
   align-items: flex-start;
   flex-direction: column;
   
-  @include mq($from: mobile, $until: mobileLandscape) {    
+  @include mq($from: mobile, $until: tablet) {    
     & + & {
       margin-top: 3rem;
     }
@@ -38,6 +38,16 @@
   }
 }
 
+.media--content-reversed {
+  @include mq($from: tablet) {
+    .media__figure {
+      order: 1;
+      margin-left: 2rem;
+      margin-right: 0;
+    }
+  }
+}
+
 .media--content-v-centered {
   align-items: center;
   text-align: center;
@@ -60,7 +70,7 @@
 }
 
 .media__title {
-  @include rms(2);
+  @include rms(1);
   margin-bottom: calc(var(--padding-media) / 2);
   color: var(--color-black);
 }

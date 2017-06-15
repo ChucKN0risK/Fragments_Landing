@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: var(--border-width) solid var(--color-lightgrey-20);
 }
 
 .l-main-footer__content {

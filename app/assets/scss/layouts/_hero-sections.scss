@@ -6,12 +6,21 @@
   margin-bottom: 2rem;
   background-image: url('../img/hero-bg.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 100% 0;
+  background-size: 70%;
+  background-position: center;
   text-align: center;
 }
 
+.l-hero-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .l-hero-section__title {
+  @include mq($from: tablet) {
+    max-width: 80%;
+  }
 }
 
 .l-hero-section__subtitle {

@@ -6,10 +6,10 @@
 .media-wrapper {
   display: flex;
 
-  @include mq($from: mobile, $until: mobileLandscape) {
+  @include mq($from: mobile, $until: tablet) {
     flex-direction: column;
   }
-  @include mq($from: mobileLandscape) {
+  @include mq($from: tablet) {
     flex-flow: row wrap;
     justify-content: space-between;
   }
