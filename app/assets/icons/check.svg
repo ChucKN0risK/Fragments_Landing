@@ -1,1 +1,15 @@
-<svg width="8" height="7" viewBox="0 0 8 7" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M7.99 1.197c0-.13-.05-.257-.144-.35l-.7-.702C7.05.052 6.922 0 6.793 0c-.13 0-.257.052-.35.145l-3.382 3.39-1.516-1.523c-.092-.092-.22-.144-.35-.144-.13 0-.258.052-.35.144l-.702.702c-.092.093-.144.223-.144.35 0 .13.052.26.144.352L2.01 5.284l.7.702c.095.093.223.144.352.144.13 0 .258-.05.35-.144l.702-.702 3.732-3.736c.093-.093.144-.22.144-.35z" fill="#00A99E" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>ui-24px-outline-1_check-circle-07</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-11" transform="translate(-1.000000, 0.000000)" stroke="#444444" stroke-width="0.909090909">
+            <g id="ui-24px-outline-1_check-circle-07" transform="translate(1.000000, 1.000000)">
+                <path d="M18.3636364,7.14761905 C18.5454545,7.87142857 18.6363636,8.68571429 18.6363636,9.5 C18.6363636,14.4761905 14.5454545,18.547619 9.54545455,18.547619 C4.54545455,18.547619 0.454545455,14.4761905 0.454545455,9.5 C0.454545455,4.52380952 4.54545455,0.452380952 9.54545455,0.452380952 C11.2727273,0.452380952 12.9090909,0.904761905 14.3636364,1.80952381" id="Shape"></path>
+                <polyline id="Shape" stroke-linecap="square" points="5.90909091 7.69047619 9.54545455 11.3095238 19.5454545 1.35714286"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
