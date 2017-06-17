@@ -128,26 +128,26 @@
 
       <section class="l-base-section section section--form-alpha u-text-centered" id="form-subscribe-alpha">
         <div class="l-content-wrapper">
-          <h3 class="section__title">Inscrivez-vous à notre alpha privée.</h3>
-          <p class="section__subtitle">Nous enverrons des invitations chaque semaine, alors inscrivez-vous à la liste d’attente dès maintenant.</p>
-          <form class="l-form l-form--subscribe-alpha">
+          <h3 class="section__title" id="sentence-form-head">Inscrivez-vous à notre alpha privée.</h3>
+          <p class="section__subtitle" id="sentence-form-content">Nous enverrons des invitations chaque semaine, alors inscrivez-vous à la liste d’attente dès maintenant.</p>
+          <form class="l-form l-form--subscribe-alpha" id="gform" action="https://script.google.com/macros/s/AKfycby8vhh879xpaP_5U-VpBMd81jpIhQGhbF_zyfxoWY-vizT6_5x_/exec">
             <div class="l-form--subscribe-alpha__fullname-wrapper">
               <div class="input-wrapper">
-                <label for="name" class="input-wrapper__label">Nom</label>
-                <input type="text" id="name" class="input-wrapper__input" placeholder="Doe" required>
+                <label for="lastname" class="input-wrapper__label">Nom</label>
+                <input type="text" id="lastname" class="input-wrapper__input" placeholder="Doe" required>
               </div>
               <div class="input-wrapper">
-                <label for="name" class="input-wrapper__label">Prénom</label>
-                <input type="text" id="name" class="input-wrapper__input" placeholder="Jon" required>
+                <label for="firstname" class="input-wrapper__label">Prénom</label>
+                <input type="text" id="firstname" class="input-wrapper__input" placeholder="Jon" required>
               </div>
             </div>
             <div class="input-wrapper">
-              <label for="name" class="input-wrapper__label">Adresse e-mail</label>
-              <input type="email" id="name" class="input-wrapper__input" placeholder="jon@doe.fr" required>
+              <label for="email" class="input-wrapper__label">Adresse e-mail</label>
+              <input type="email" id="email" class="input-wrapper__input" placeholder="jon@doe.fr" required>
             </div>
             <div class="input-wrapper">
-              <label for="name" class="input-wrapper__label">Nom de votre entreprise</label>
-              <input type="text" id="name" class="input-wrapper__input" placeholder="Jon Doe Corp" required>
+              <label for="company" class="input-wrapper__label">Nom de votre entreprise</label>
+              <input type="text" id="company" class="input-wrapper__input" placeholder="Jon Doe Corp" required>
             </div>
             <button type="submit" class="m-btn m-btn--primary l-form__submit">M'inscrire à l'alpha privée</button>
           </form>
