@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             });
-            
+
             this._el.addEventListener('submit', function(event) {
                 _this.constructData(_this);
                 _this.send(_this, event);
@@ -300,8 +300,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(this.errors)
         },
         showValidationContent: function() {
-            document.querySelector('.section--form-alpha__content-before-sendind').classList.add('u-hide');
-            document.querySelector('.section--form-alpha__content-after-sendind').classList.remove('u-hide');
+            document.querySelector('.js-content-before-sendind').classList.add('u-hide');
+            document.querySelector('.js-content-after-sendind').classList.remove('u-hide');
         },
         send: function(form, event) {
             var _this = this;
