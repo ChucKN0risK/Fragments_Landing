@@ -43,6 +43,15 @@
   }
 }
 
+.section--large-spaced {
+  &:not(.l-hero-section) {
+    @include mq($from: tablet) {
+      padding-top: calc(var(--base-padding, 1rem) * 10);
+      padding-bottom: calc(var(--base-padding, 1rem) * 10);    
+    }
+  }
+}
+
 .section--bottom-border {
   position: relative;
 

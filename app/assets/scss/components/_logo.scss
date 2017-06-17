@@ -3,8 +3,9 @@
    ======================= */
 
 .c-logo {
-  height: 2rem;
-  width: 9rem;
+  // height: 2rem;
+  // width: 9rem;
+  @include size(11rem, 4rem);
 }
 
 .c-logo__icon {

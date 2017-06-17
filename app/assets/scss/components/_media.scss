@@ -49,9 +49,10 @@
     width: 100%;
 
     .media__figure {
-      max-width: 53.125rem; //850px
+      max-width: 54%;
       margin-bottom: 0;
       margin-right: 2rem;
+      box-shadow: var(--box-shadow-screen);
     }
   }
 }

@@ -45,6 +45,7 @@
   display: flex;
   justify-content: space-between;
   padding: var(--base-padding);
+  text-align: center;
 
   &:not(:last-child)::after {
     content: '';
@@ -77,7 +78,6 @@
 
 .price-table__row.price-table__header--highlighted {
   background-color: var(--color-purple-600);
-  font-family: var(--RobotoLight);
 
   &,
   .price-table__row__variation,
@@ -97,6 +97,6 @@
 }
 
 .price-table__row__variation {
-  color: var(--color-black); 
+  color: var(--color-black);
 }
 
