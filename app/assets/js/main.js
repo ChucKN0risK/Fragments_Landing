@@ -107,13 +107,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             });
-
-            this._validateButton.addEventListener('click', function(e) {
-                e.preventDefault()
+            
+            this._el.addEventListener('submit', function(event) {
                 _this.constructData(_this);
-                _this.send(_this);
-                // _this.clean();
-            });
+                _this.send(_this, event);
+                _this.clean();
+            }, false);
         },
         constructValidityRules: function() {
             var _this = this;
@@ -304,15 +303,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.section--form-alpha__content-before-sendind').classList.add('u-hide');
             document.querySelector('.section--form-alpha__content-after-sendind').classList.remove('u-hide');
         },
-        send: function(form) {
+        send: function(form, event) {
             var _this = this;
 
             if (form.errors.length == 0) {
                 console.log(form.data)
+                console.log(event)
 
                 var url = event.target.action; //
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', url);
+                console.log(url)
                 // xhr.withCredentials = true;
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.onreadystatechange = function() {
