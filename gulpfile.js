@@ -162,10 +162,12 @@ gulp.task('img', ['copy-img'], function() {
     return gulp
         .src(path.img)
         .pipe(changed(path.dist_img))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-        }))
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({plugins: [{removeViewBox: false}]})
+        ]))
         .pipe(gulp.dest(path.dist_img));
 });
 
