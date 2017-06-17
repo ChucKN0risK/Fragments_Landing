@@ -306,6 +306,8 @@ document.addEventListener('DOMContentLoaded', function() {
         send: function(form, event) {
             var _this = this;
 
+            event.preventDefault();
+
             if (form.errors.length == 0) {
                 console.log(form.data)
                 console.log(event)
@@ -327,8 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     return encodeURIComponent(k) + '=' + encodeURIComponent(form.data[k])
                 }).join('&')
                 // we are submitting via xhr below
-                event.preventDefault();
-
                 xhr.send(encoded);
             }
         }
