@@ -31,6 +31,6 @@ npm-debug.log
 # Local Development Configuration
 localconfig.json
 dploy.yaml
-
+.idea/
 # Dist folder used for production only
 dist/
