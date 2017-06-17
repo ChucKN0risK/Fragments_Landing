@@ -43,6 +43,7 @@ var path = {
     svgSprite: 'app/assets/icons/dest',
     fonts: 'app/assets/fonts/*.{ttf,woff,eof,svg,otf}',
     html: 'app/*.html',
+    favicons: 'app/favicons/*.{png,xml,ico,json,svg}',
     dist: 'dist/',
     dist_js: 'dist/assets/js/',
     dist_js_vendor: 'dist/assets/js/vendor/',
@@ -50,6 +51,7 @@ var path = {
     dist_img: 'dist/assets/img/',
     dist_fonts: 'dist/assets/fonts/',
     dist_icons: 'dist/assets/icons/',
+    dist_favicons: 'dist/favicons/',
 };
 
 var autoprefixerOptions = {
@@ -230,4 +232,8 @@ gulp.task('build', ['clean', 'sass-prod', 'js-prod', 'img', 'svgstore'], functio
     // Copy Config files to dist
     gulp.src('app/*.{htaccess,xml,txt}', { dot: true })
         .pipe(gulp.dest(path.dist));
+
+    // Copy favicons to dist
+    gulp.src(path.favicons)
+        .pipe(gulp.dest(path.dist_favicons));
 });
