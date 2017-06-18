@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this._el.addEventListener('submit', function(event) {
                 _this.constructData(_this);
                 _this.send(_this, event);
-                _this.clean();
             }, false);
         },
         constructValidityRules: function() {
@@ -285,20 +284,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Seek for disabled option in select and select it, if
         // Set all input value to ''
         // Add all inputs in erros[] with initFormErrors
-        clean: function() {
-            Array.prototype.forEach.call(this._elements, function(el, i) {
-                if (el.type == 'radio' || el.type == 'checkbox') {
-                    el.checked = false
-                } else if (el.nodeName == 'SELECT') {
-                    el.selectedIndex = 0
-                } else {
-                    el.value = ''
-                }
-                el.classList.remove('touched')
-            });
-            this.initFormErrors();
-            console.log(this.errors)
-        },
         showValidationContent: function() {
             document.querySelector('.js-content-before-sendind').classList.add('u-hide');
             document.querySelector('.js-content-after-sendind').classList.remove('u-hide');
