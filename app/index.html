@@ -53,6 +53,31 @@
         a.appendChild(r);
       })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+        t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+        t.factory = function(e) {
+          return function() {
+            var n;
+            return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+          n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('sxc9kcckrc5a');
+  </script>
+  <!-- End of Async Drift Code -->
 </head>
 <body>
 
@@ -99,7 +124,7 @@
       </section>
 
       <section class="section section--bottom-border">
-        <div class="l-content-wrapper">          
+        <div class="l-content-wrapper">
           <ul class="l-base-section media-wrapper">
             <li class="media media--content-v-centered">
               <div class="media__figure">
@@ -185,7 +210,7 @@
                 <li>Artboards</li>
                 <li>Symboles Sketch</li>
                 <li>Palettes de couleurs</li>
-                <li>Styles de texte</li>  
+                <li>Styles de texte</li>
                 <li>Assets</li>
               </ul>
             </div>
