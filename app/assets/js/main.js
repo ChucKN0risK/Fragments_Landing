@@ -26,7 +26,6 @@
 // document.querySelector('.el').nextElementSibling;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('contact form submission handler loaded successfully');
 
     var formValidator = {
         init: function(el) {
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.setElementsMarker();
             this.initFormErrors();
             this.events();
-            console.log(this.errors)
         },
         events: function() {
             var _this = this;
@@ -75,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
                         }
 
-                        console.log('errors length :', _this.errors.length)
                         if (_this.errors.length == 0) {
                             _this.isValid = true;
                         }
@@ -93,14 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                 case 'required':
                                     _this.handleError(el, _this.checkIfRequired(ruleValue, el.value, el.type, el))
                                     if (el.type == 'radio' || el.type == 'checkbox') {
-                                        console.log(el.getAttribute('name'))
                                         _this.handleError(el, _this.checkRadioChecked(_this, el.getAttribute('name')))
                                     }
                                     break;
                             }
                         }
 
-                        console.log('errors length :', _this.errors.length)
                         if (_this.errors.length == 0) {
                             _this.isValid = true;
                         }
@@ -125,8 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // set to the 'js-class' of each element.
                 // caveat : the js-class is not always the first class
                 _this.elementsValidityRules[el.classList[0]] = {}
-
-                // console.log(el.classList)
 
                 // As we set on all of our form elements a 'required'
                 // attribute they will all be set in our 'elementsValidityRules'
@@ -212,7 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If element isn't already in errors[] we push it
                 if (this.errors.indexOf(el.getAttribute('data-element')) == -1) {
                     this.errors.push(el.getAttribute('data-element'));
-                    console.log(this.errors)
                 }
                 // We remove the element from the array if its
                 // value is correct.
@@ -227,13 +219,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             Array.prototype.forEach.call(radio, function(el, index) {
                                 if (_this.errors[i] === el.getAttribute('data-element')) {
                                     _this.errors.splice(i, 1);
-                                    console.log(_this.errors)
                                 }
                             });
                         }
                         if (el.type !== 'radio' && el.type !== 'checkbox' && this.errors[i] === el.getAttribute('data-element')) {
                             this.errors.splice(i, 1);
-                            console.log(this.errors)
                         }
                     }
                 }
@@ -294,13 +284,10 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
 
             if (form.errors.length == 0) {
-                console.log(form.data)
-                console.log(event)
 
                 var url = event.target.action; //
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', url);
-                console.log(url)
                 // xhr.withCredentials = true;
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.onreadystatechange = function() {
