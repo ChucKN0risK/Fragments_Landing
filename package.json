@@ -8,6 +8,10 @@
     "ES6",
     "Hetic"
   ],
+  "scripts": {
+    "dploy" : "gulp build; dploy prod",
+    "dploy-index" : "gulp build; dploy index"
+  },
   "main": "README.md",
   "author": {
     "name": "Louis Chenais",
