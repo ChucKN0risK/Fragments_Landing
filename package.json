@@ -9,8 +9,7 @@
     "Hetic"
   ],
   "scripts": {
-    "dploy" : "gulp build; dploy prod",
-    "dploy-index" : "gulp build; dploy index"
+    "dploy" : "gulp build; dploy prod"
   },
   "main": "README.md",
   "author": {
