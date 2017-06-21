@@ -25,30 +25,41 @@
 
 .l-main-footer__made + .l-main-footer__social-links {
   position: relative;
-  padding-left: 1rem;
-  margin-left: 1rem;
-  align-self: flex-start;
   height: 100%;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: calc(100% - 2px);
-    transform: translateY(-50%);
-    display: block;
-    background-color: var(--color-grey-40);;
-    @include size(3px);
-    border-radius: 100%;
+  @include mq($from: mobile, $until: 650px) {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  @include mq($from: 651px) {
+    padding-left: 1rem;
+    margin-left: 1rem;
+    align-self: flex-start;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: calc(100% - 2px);
+      transform: translateY(-50%);
+      display: block;
+      background-color: var(--color-grey-40);;
+      @include size(3px);
+      border-radius: 100%;
+    }
   }
 }
 
 .l-main-footer__copyrights {
   font-family: var(--RobotoLight);
-  margin-left: auto;
 
   @include mq($from: mobile, $until: 650px) {
     margin-top: 1rem;
+  }
+
+  @include mq($from: 651px) {
+    margin-left: auto;
   }
 }
 

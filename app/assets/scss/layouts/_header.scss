@@ -24,7 +24,7 @@
 .l-main-header__nav__anchors-list {
   display: none;
 
-  @include mq($from: 900px) {
+  @include mq($from: $header-nav-breakpoint) {
     display: flex;
     align-items: center;
     justify-content: space-between;

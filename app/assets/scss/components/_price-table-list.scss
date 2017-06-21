@@ -96,7 +96,13 @@
   
 }
 
+.price-table__row__text {
+  text-align: left;
+}
+
 .price-table__row__variation {
+  display: flex;
+  align-items: center;
   color: var(--color-black);
 }
 
