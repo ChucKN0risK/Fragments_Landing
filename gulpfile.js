@@ -41,7 +41,7 @@ var path = {
     img_to_resize: 'app/assets/img-to-resize/**/*.{png,jpeg,jpg,gif}',
     icons: 'app/assets/icons/*.svg',
     svgSprite: 'app/assets/icons/dest',
-    fonts: 'app/assets/fonts/*.{ttf,woff,eof,svg,otf}',
+    fonts: 'app/assets/fonts/*.{woff,woff2,otf}',
     html: 'app/*.html',
     favicons: 'app/favicons/*.{png,xml,ico,json,svg}',
     dist: 'dist/',
