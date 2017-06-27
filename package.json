@@ -1,15 +1,17 @@
 {
-  "name": "LuchosFrontFramework",
+  "name": "Fragments Landing",
   "version": "1.0.0",
-  "description": "Front-End Framework providing a modular architecture",
+  "description": "Fragments is a design system manager",
   "keywords": [
-    "Module",
+    "design system",
     "SMACSS",
     "ES6",
-    "Hetic"
+    "style guide",
+    "components",
+    "atomic design"
   ],
   "scripts": {
-    "dploy" : "gulp build; dploy prod"
+    "dploy": "gulp build; dploy prod"
   },
   "main": "README.md",
   "author": {
@@ -19,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/ChucKN0risK/LuchosFrontFramework.git"
+    "url": "github.com:ChucKN0risK/Fragments_Landing.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -52,6 +54,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^5.0.0",
     "sassdoc": "^2.1.20",
+    "stylelint-config-standard": "^16.0.0",
     "svg2png": "^4.0.0",
     "svg4everybody": "^2.1.0"
   }
