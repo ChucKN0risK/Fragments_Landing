@@ -24,8 +24,6 @@ var rename           = require('gulp-rename');
 var size             = require('gulp-size');
 var dom              = require('gulp-dom');
 var changed          = require('gulp-changed');
-var parallel         = require('concurrent-transform');
-var os               = require('os');
 var rename           = require('gulp-rename');
 
 // ---------------------------------------------------------------

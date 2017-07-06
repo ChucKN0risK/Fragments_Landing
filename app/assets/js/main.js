@@ -308,4 +308,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var contactForm = formValidator;
     contactForm.init('#gform');
+
 });
