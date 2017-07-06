@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.12.3",
+    "browser-sync": "^2.18.12",
     "critical": "^0.8.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
