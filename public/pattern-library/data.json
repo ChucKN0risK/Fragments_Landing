@@ -1,0 +1,113 @@
+{
+    "project_logo": "https://www.fragments.design/assets/icons/fragments-logo.svg",
+    "project_favicon": "https://fragments.design/favicons/favicon-32x32.png",
+    "project_name": "Fragments",
+    "project_url": "https://www.fragments.design",
+    "copyright_start_year": "2017",
+    "client_name": "fragments",
+    "client_url": "https://www.fragments.design",
+    "creators": [
+        {
+            "name": "Valentin Chrétien",
+            "url": "https://twitter.com/valentinchrt"
+        },
+        {
+            "name": "Antoine Moreaux",
+            "url": "https://twitter.com/Antoine_Moreaux"
+        },
+        {
+            "name": "Louis Chenais",
+            "url": "https://twitter.com/ChucKN0risK"
+        },
+        {
+            "name": "Pierre Antoine Lemaitre",
+            "url": "https://www.linkedin.com/in/pierre-antoine-lemaitre-b7131b51/"
+        }
+    ],
+    "theme": {
+        "border_color": "#E0E6ED",
+        "highlight_color": "#F9FAFC",
+        "brand_color": "#6032c3",
+        "background_color": "#FFFFFF",
+        "code_highlight_theme": "github",
+        "override_code_highlight_bg": "#F9FAFC",
+        "sample_dark_background": "#333333",
+        "show_project_name": false,
+        "show_version": true,
+        "max_width": null,
+        "titles": {
+            "library_title": "Pattern Library",
+            "pages_title": "Overview",
+            "components_title": "Components"
+        }
+    },
+    "assets": {
+        "css": [
+            "https://www.fragments.design/assets/css/style.css"
+        ],
+        "js": [
+            "https://www.fragments.design/assets/js/main.js"
+        ]
+    },
+    "font_libraries": {
+        "typekit_code": null,
+        "typography_web_fonts": null,
+        "google_web_fonts": null
+    },
+    "content": {
+        "show_first_page_on_load": true,
+        "title": "Overview",
+        "pages": [
+            {
+                "name": "introduction",
+                "title": "Introduction",
+                "file": "./pages/intro.md"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "name": "colors",
+            "title": "Colors",
+            "components": [
+                {
+                    "group": "colors",
+                    "name": "primary-colors",
+                    "title": "Colors",
+                    "type": "colors",
+                    "colors": [
+                        "#fff",
+                        "#000",
+                        "#fa4a4a",
+                        "#202f55",
+                        "rgba(0, 0, 0, 0.05)",
+                        "rgba(0, 0, 0, 0.1)",
+                        "rgba(0, 0, 0, 0.27)",
+                        "rgba(0, 0, 0, 0.4)",
+                        "rgba(0, 0, 0, 0.57)",
+                        "#f9f9f9",
+                        "#e5e7ea",
+                        "#27ae60",
+                        "#bfa9f2",
+                        "#9474dd",
+                        "#7a57d1",
+                        "#6032c3",
+                        "#4300b3"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "buttons",
+            "title": "Buttons",
+            "components": [
+                {
+                    "group": "buttons",
+                    "name": "default",
+                    "title": "Default Button"
+                }
+            ]
+        }
+    ],
+    "version": "1.9.5"
+}

@@ -80,7 +80,15 @@ gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: 'app'
-        },
+        }
+    })
+});
+
+gulp.task('styleguide', function() {
+    browserSync.init({
+        server: {
+            baseDir: 'public/pattern-library'
+        }
     })
 });
 
