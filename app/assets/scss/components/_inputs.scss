@@ -1,6 +1,6 @@
-/* =======================
-   Components / Inputs
-   ======================= */
+// =======================
+// Components / Inputs
+// =======================
 
 input[type="text"],
 input[type="email"],
@@ -13,7 +13,7 @@ select {
   display: flex;
   @include rms(0);
   height: var(--input-height);
-  padding: .5rem;
+  padding: 0.5rem;
   border: var(--border-width) solid var(--color-grey-20);
   border-radius: var(--border-radius);
   font-weight: 300;
@@ -30,26 +30,29 @@ select {
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: var(--color-grey-30);
   }
+
   ::-moz-placeholder { /* Firefox 19+ */
     color: var(--color-grey-30);
   }
+
   :-ms-input-placeholder { /* IE 10+ */
     color: var(--color-grey-30);
   }
+
   :-moz-placeholder { /* Firefox 18- */
     color: var(--color-grey-30);
   }
 
   &.touched:required:valid {
-      border-color: var(--color-success);
+    border-color: var(--color-success);
   }
 
   &.touched:required:invalid {
-      border-color: var(--color-error);
+    border-color: var(--color-error);
 
-      & + .input-error-msg {
-        display: block;
-      }
+    & + .input-error-msg {
+      display: block;
+    }
   }
 }
 
@@ -72,7 +75,7 @@ textarea {
 
   label {
     color: var(--color-grey-50);
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     &.is-mandatory {
       &::after {
@@ -82,28 +85,34 @@ textarea {
       }
     }
   }
+
   input,
   select,
   datalist {
     width: 100%;
     min-height: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   input.tiny {
     width: 3rem;
   }
+
   &.disabled input {
     cursor: not-allowed;
     background-color: var(--color-lightgrey-20);
   }
+
   &.has-error {
     input {
       border-color: var(--color-error);
     }
   }
+
   &--arrow-down {
     &::after {
       content: '';
@@ -125,9 +134,9 @@ textarea {
 // the associated input
 // eg : 500 letters maximum (textarea)
 .input-upper-text {
-    color: var(--color-grey-20);
-    @include rms(-1);
-    margin-bottom: 10px;
+  color: var(--color-grey-20);
+  @include rms(-1);
+  margin-bottom: 10px;
 }
 
 .input-error-msg {
@@ -147,9 +156,11 @@ textarea {
 .checkbox-wrapper {
   display: flex;
   align-items: baseline;
+
   input[type="checkbox"] {
     flex-shrink: 0;
   }
+
   &.has-error {
     .checkbox-label {
       color: var(--color-error);
@@ -158,7 +169,7 @@ textarea {
 }
 
 .checkbox-label {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 
@@ -168,10 +179,12 @@ textarea {
 // Class aimed to be applied on a block containing : ul.radio-list > li.radio-wrapper
 .choice-list-wrapper {
   position: relative;
+
   & > label {
     @include rms(1);
     font-weight: 700;
-    line-height: 2.5; //Simulates a margin-bottom on the title of the radio list
+    //Simulates a margin-bottom on the title of the radio list
+    line-height: 2.5;
   }
 }
 
@@ -179,21 +192,26 @@ textarea {
   display: flex;
   flex-flow: row nowrap;
   align-items: baseline;
+
   input[type="radio"] {
     width: auto;
     flex-shrink: 0;
   }
+
   &.has-error {
     .radio-label {
       color: var(--color-error);
     }
   }
+
   .radio-label {
     cursor: pointer;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
+
   .radio-list & {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -232,14 +250,17 @@ textarea {
 .date-wrapper {
   display: flex;
   justify-content: space-between;
+
   select.day {
     min-width: 3rem;
     margin-right: 1rem;
   }
+
   select.month {
     min-width: 8rem;
     margin-right: 1rem;
   }
+
   select.year {
     min-width: 5rem;
   }
