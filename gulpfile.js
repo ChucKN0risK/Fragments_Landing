@@ -20,11 +20,9 @@ var rename           = require('gulp-rename');
 var svgstore         = require('gulp-svgstore');
 var svg2png          = require('gulp-svg2png');
 var svgmin           = require('gulp-svgmin');
-var rename           = require('gulp-rename');
 var size             = require('gulp-size');
 var dom              = require('gulp-dom');
 var changed          = require('gulp-changed');
-var rename           = require('gulp-rename');
 
 // ---------------------------------------------------------------
 // Configuration
